@@ -11,6 +11,60 @@ axios.get('https://api.github.com/users/QuintonStudent')
     console.log(err);
   });
 
+axios.get('https://api.github.com/users/alasalle')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
+axios.get('https://api.github.com/users/tetondan')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
+axios.get('https://api.github.com/users/dustinmyers')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
+axios.get('https://api.github.com/users/justsml')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
+axios.get('https://api.github.com/users/luishrd')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
+axios.get('https://api.github.com/users/bigknell')
+  .then( response => {
+    console.log(response.data);
+    creatorFunction(response.data);
+  })
+  .catch( err => {
+    console.log(err);
+  });
+
 /* Step 2: Inspect and study the data coming back, this is YOUR
    github info! You will need to understand the structure of this
    data in order to use it to build your component function
@@ -51,8 +105,13 @@ const followersArray = [];
     <p>Bio: {users bio}</p>
   </div>
 </div>
-
 */
+// const something = document.querySelector('.cards');
+// console.log(something);
+//
+// const test = document.querySelector('.test');
+// console.log(test);
+
 function creatorFunction(Obj) {
   // create elements
   let divCard = document.createElement('div');
@@ -96,7 +155,8 @@ function creatorFunction(Obj) {
   divCardInfo.appendChild(paragraphFollowing);
   divCardInfo.appendChild(paragraphBio);
 
-  console.log(divCard);
+  let cards = document.querySelector('.cards');
+  cards.appendChild(divCard);
 }
 
 /* List of LS Instructors Github username's:
